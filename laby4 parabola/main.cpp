@@ -20,6 +20,7 @@ int main(){
     std::cout << "Podaj punkt badania pochodnej: ";
     point poch = point(x,y);
     std::cin >> x >> y;
+    para.pochodna(x,y);
 
     return 0;
 }

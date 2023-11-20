@@ -50,6 +50,13 @@ std::string parabola::check(point p1, point p2, point p3){
     }
 }
 
-void parabola::show(){
-    std::cout << "a,b,c = " << a << ", " << b << ", " << c << std::endl;
+void parabola::show() {
+    //std::cout << "a,b,c = " << a << ", " << b << ", " << c << std::endl;
+    std::cout << "y = " << a << "x^2 + " << b << "x + " << c << std::endl;
+}
+
+void parabola::pochodna(double x_0, double y_0){
+    double a_pochodnej = 2*a*x_0 + b; // f'(x_0)
+    double b_pochodnej = pow(a*(x_0),2) + b*x_0 + c - (2*a*x_0 + b)*x_0; // f(x_0) - f'(x_0)*x_0
+    std::cout << "Pochodna dana jest wzorem: y = " << a_pochodnej << "x + " << b_pochodnej << std::endl;
 }
