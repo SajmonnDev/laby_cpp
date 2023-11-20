@@ -1,0 +1,3 @@
+C:/Users/szymon/CLionProjects/laby_cpp/laby4 parabola/cmake-build-debug/CMakeFiles/parabola.dir
+C:/Users/szymon/CLionProjects/laby_cpp/laby4 parabola/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/szymon/CLionProjects/laby_cpp/laby4 parabola/cmake-build-debug/CMakeFiles/rebuild_cache.dir

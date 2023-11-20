@@ -8,5 +8,4 @@ add_executable(parabola main.cpp
         parabola.h
         "../laby 6 parabola i operatory/main.cpp"
         "../laby 6 parabola i operatory/parabola.cpp"
-        "../laby 6 parabola i operatory/parabola.h"
-        "../lab6 para/main.cpp")
+        "../laby 6 parabola i operatory/parabola.h")
