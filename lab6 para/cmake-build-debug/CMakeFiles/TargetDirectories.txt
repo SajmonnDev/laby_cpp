@@ -1,0 +1,3 @@
+C:/Users/szymon/CLionProjects/lab6 para/cmake-build-debug/CMakeFiles/lab6_para.dir
+C:/Users/szymon/CLionProjects/lab6 para/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/szymon/CLionProjects/lab6 para/cmake-build-debug/CMakeFiles/rebuild_cache.dir
