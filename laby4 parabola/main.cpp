@@ -17,10 +17,9 @@ int main(){
     std::string check = para.check(p1,p2,p3);
     std::cout << check << std::endl;
 
-    std::cout << "Podaj punkt badania pochodnej: ";
-    point poch = point(x,y);
-    std::cin >> x >> y;
-    para.pochodna(x,y);
+    std::cout << "Podaj x_0 badania pochodnej: ";
+    std::cin >> x;
+    para.pochodna(x);
 
     return 0;
 }

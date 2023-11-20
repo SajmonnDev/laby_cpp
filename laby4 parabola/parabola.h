@@ -32,7 +32,7 @@ public:
     void pokaz_licz_parabol();
     void show();
     std::string check(point p1, point p2, point p3);
-    void pochodna(double x_0, double y_0);
+    void pochodna(double x_0);
     friend class point;
 };
 
