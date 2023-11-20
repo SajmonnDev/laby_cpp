@@ -18,8 +18,8 @@ int main(){
     std::cout << check << std::endl;
 
     std::cout << "Podaj punkt badania pochodnej: ";
-    point poch;
-    std::cin >> poch.x >> poch.y;
+    point poch = point(x,y);
+    std::cin >> x >> y;
 
     return 0;
 }
