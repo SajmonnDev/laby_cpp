@@ -32,7 +32,7 @@ class Generator{
     Histogram h = Histogram(10);
 
 public:
-    Generator(long N, double a, double c, double m, long s) :
+    Generator(long N, long a, long c, long m, long s) :
             n(N), w1(a), w2(c), w3(m), seed(s) {
         pop = seed;
         for(int i = 0; i < n; i++){

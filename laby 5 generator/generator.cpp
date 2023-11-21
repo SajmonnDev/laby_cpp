@@ -10,11 +10,11 @@ Generator::~Generator() = default;
 
 void Histogram::print(){
     for(int i = 0; i < zakres ; i++){
-        std::cout << double(i)/double(zakres) << ": ";
-        for(int j = 0; j < histo[i]; j++){
-            std::cout << "*";
-        }
-        std::cout << std::endl;
+        std::cout << double(i)/double(zakres) << ": " << histo[i] << std::endl;
+//        for(int j = 0; j < histo[i]; j++){
+//            std::cout << "*";
+//        }
+//        std::cout << std::endl;
     }
 }
 
