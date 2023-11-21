@@ -22,6 +22,8 @@ void point::wypisz_pkt(){
     std::cout << "Liczba punktow to: " << counter << std::endl;
 }
 
+
+
 parabola::parabola(point P1, point P2, point P3)
         : p1(P1), p2(P2), p3(P3), licz_parabol(licz_parabol + 1) {}
 

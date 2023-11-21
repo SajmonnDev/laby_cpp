@@ -1,33 +1,31 @@
-//
-// Created by szymon on 20.11.2023.
-//
 #include <iostream>
 #include "parabola.h"
 
-int main(){
+int main() {
+    double x, y;
 
-    std::cout << "Podaj wartosci 3 puntow: ";
-    double x,y;
+    std::cout << "Podaj wartosci dla punktu 1: ";
     std::cin >> x >> y;
-    point p1 = point(x,y);
-    p1.show();
-    std::cin >> x >> y;
-    point p2 = point(x,y);
-    p2.show();
-    std::cin >> x >> y;
-    point p3 = point(x,y);
-    p3.show();
-    parabola para = parabola(p1, p2, p3);
-    para.oblicz_wspolczynniki();
-    para.show();
-    std::string check = para.check(p1,p2,p3);
-    std::cout << check << std::endl;
+    point p1(x, y);
 
-    std::cout << "Podaj punkt badania pochodnej: ";
-    point poch = point(x,y);
+    std::cout << "Podaj wartosci dla punktu 2: ";
     std::cin >> x >> y;
-    para.pochodna(x,y);
-    p1 == p2;
+    point p2(x, y);
+
+    std::cout << "Podaj wartosci dla punktu 3: ";
+    std::cin >> x >> y;
+    point p3(x, y);
+
+    parabola para(p1, p2, p3);
+
+    std::cout << "Parabola stworzona z punktow: " << p1 << ", " << p2 << ", " << p3 << std::endl;
+    std::cout << para << std::endl;
+
+    std::cout << para.check(p1, p2, p3) << std::endl;
+
+    std::cout << "Podaj punkt x dla obliczenia pochodnej paraboli: ";
+    std::cin >> x;
+    para.pochodna(x);
+
     return 0;
 }
-

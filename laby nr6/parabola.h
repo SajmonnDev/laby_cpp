@@ -1,45 +1,45 @@
-//
-// Created by szymon on 20.11.2023.
-//
 #include <iostream>
 
 #ifndef __PARABOLA__
 #define __PARABOLA__
 
-class point{
-
-    double x,y;
-    int counter = 0;
+class point {
+    double *x, *y;
+    static int counter;
 
 public:
     point(double X, double Y);
-    point(point &p);
+    point(const point &p);
     ~point();
-    void show();
-    double policz_y(double a, double b, double c, double x);
-    void wypisz_pkt();
-    void operator== (const point &p);
+    double policz_y(double a, double b, double c) const;
+    bool operator==(const point &p) const;
+    friend std::ostream& operator<<(std::ostream& os, const point& p);
+
+    static void wypisz_pkt();
+    double getX() const { return *x; }
+    double getY() const { return *y; }
     friend class parabola;
 };
 
-class parabola{
-    double a,b,c;
-    point p1, p2, p3;
-    int licz_parabol = 0;
+class parabola {
+    double *a, *b, *c;
+    static int licz_parabol;
 
 public:
     parabola(point P1, point P2, point P3);
-    parabola(parabola &para);
+    parabola(const parabola &para);
     ~parabola();
-    void oblicz_wspolczynniki();
-    void pokaz_licz_parabol();
-    void show();
-    std::string check(point p1, point p2, point p3);
-    void pochodna(double x_0, double y_0);
-    void operator== (const parabola &para);
-    friend class point;
+    bool operator==(const parabola &para) const;
+    friend std::ostream& operator<<(std::ostream& os, const parabola& para);
+
+    void oblicz_wspolczynniki(point P1, point P2, point P3);
+    static void pokaz_licz_parabol();
+    void pochodna(double x_0) const;
+    std::string check(const point& P1, const point& P2, const point& P3) const;
+
+    double getA() const { return *a; }
+    double getB() const { return *b; }
+    double getC() const { return *c; }
 };
 
-
-#endif
-
+#endif // __PARABOLA__
