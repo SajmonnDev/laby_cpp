@@ -12,7 +12,7 @@ int main() {
     std::cin >> n >> m >> l;
     Macierz m2 = Macierz(n, m, l);
     std::cout << "Macierz druga:" << std::endl << m2 << std::endl;
-
+    //a
     Macierz m3 = m1 + m2;
     std::cout << "Dodawanie macierzy m1 do m2:" << std::endl << m3 << std::endl;
     Macierz m4 = m1 - m2;
