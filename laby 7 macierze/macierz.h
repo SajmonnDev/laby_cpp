@@ -18,7 +18,7 @@ class Macierz{
     int n,m;
 
 public:
-    Macierz(int n, int m, float l);
+    Macierz(int n, int m);
     Macierz();
     ~Macierz(){
         for(int i = 0; i < n; i++){
@@ -26,13 +26,14 @@ public:
         }
         delete[] mac;
     }
-
+    void wpisz_dane();
     Macierz(Macierz &m);
     friend Macierz operator+ (const Macierz &m1, const Macierz &m2);
     friend Macierz operator- (const Macierz &m1, const Macierz &m2);
     friend Macierz operator* (const Macierz &m1, const Macierz &m2);
     friend std::ostream& operator<< (std::ostream& os, const Macierz &m2);
-    friend Macierz operator= (const Macierz &m1);
+    //friend Macierz operator= (const Macierz &m1);
+    Macierz& operator= (const Macierz &m1);
 
 
 };
@@ -41,7 +42,7 @@ Macierz operator+ (const Macierz &m1, const Macierz &m2);
 Macierz operator- (const Macierz &m1, const Macierz &m2);
 Macierz operator* (const Macierz &m1, const Macierz &m2);
 std::ostream& operator<< (std::ostream& os,const Macierz &m2);
-Macierz operator= (const Macierz &m1);
+//Macierz operator= (const Macierz &m1);
 
 
 
